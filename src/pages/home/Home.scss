@@ -1,7 +1,39 @@
+@import '../../variables.scss';
+
 .home {
     display: flex;
 
     .homeContainer {
         flex: 6;
+        background-color: $background-color;
+    }
+
+    .widgets {
+        display: flex;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .charts {
+        display: flex;
+        gap: 20px;
+        padding: 5px 20px;
+
+    }
+
+    .listContainer {
+        display: flex;
+        margin: 20px;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        border-radius: 10px;
+
+        .listTitle {
+            font-weight: 500;
+            color: $text-color;
+            margin-bottom: 50px;
+
+        }
+
     }
 }

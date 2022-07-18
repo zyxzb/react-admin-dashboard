@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     width: 100%;
+    background-color: $background-color;
 
     .wrapper {
         display: flex;
@@ -16,6 +17,18 @@
         .search {
             display: flex;
             align-items: center;
+            border: 1px solid $border-color;
+
+            input {
+                border: none;
+                background: transparent;
+                outline: none;
+                padding: 5px;
+
+                &::placeholder {
+                    font-size: 12px;
+                }
+            }
 
         }
 
@@ -25,8 +38,37 @@
             .item {
                 display: flex;
                 align-items: center;
-                padding: 5px;
+                margin-right: 20px;
+                position: relative;
 
+                .icon {
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+
+                .avatar {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: 1px solid $border-color;
+                }
+
+                .counter {
+                    width: 15px;
+                    height: 15px;
+                    background-color: red;
+                    font-size: 11px;
+                    font-weight: bold;
+                    color: white;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: -1px;
+                    right: -5px;
+
+                }
             }
         }
     }

@@ -1,0 +1,19 @@
+@import '../../variables.scss';
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    border-radius: 10px;
+
+    .title {
+        display: flex;
+        font-size: 16px;
+        color: $text-color;
+        font-weight: bold;
+        padding: 8px;
+        justify-content: flex-start;
+
+    }
+}
