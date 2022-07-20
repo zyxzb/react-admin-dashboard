@@ -12,7 +12,7 @@ import {
 //styles
 import './Chart.scss';
 
-const Chart = () => {
+const Chart = ({title}) => {
 
     const data = [
         {
@@ -44,7 +44,7 @@ const Chart = () => {
 
     return (
         <div className='chart'>
-            <div className="title">Last 6 Months</div>
+            <div className="title">{title ? title : "Last 6 Months"}</div>
             <ResponsiveContainer className='rechartContainer'>
                 <AreaChart
                     width={730}

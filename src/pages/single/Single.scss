@@ -1,7 +1,118 @@
+@import '../../variables.scss';
+
 .single {
     display: flex;
+    background-color: $background-color;
+
 
     .singleContainer {
         flex: 6;
+
+        .top {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+            background-color: $background-color;
+
+            .left {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+                padding: 20px;
+                position: relative;
+                border-radius: 10px;
+
+
+                .editButton {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    margin: 5px 5px 0;
+                    color: $text-color;
+                    border-bottom: 1px dotted $text-color;
+                    border: max-content;
+                    cursor: pointer;
+
+                }
+
+                .information {
+                    font-size: 16px;
+                    padding-left: 20px;
+                    margin-bottom: 20px;
+                    color: $text-color;
+
+                }
+
+                .item {
+                    display: flex;
+
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        padding: 20px;
+                    }
+
+                    .details {
+                        flex: 2;
+
+                        h3 {
+                            font-size: 22px;
+                            margin-bottom: 10px;
+                        }
+
+                        .detailItem {
+                            display: flex;
+                            flex-direction: column;
+                            margin-bottom: 5px;
+
+                            .itemKey,
+                            .itemValue {
+                                display: block;
+                            }
+
+                            .itemKey {
+                                font-size: 18px;
+                                font-weight: bold;
+                            }
+
+                            .itemValue {
+                                color: $text-color;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .right {
+                display: flex;
+                flex: 2;
+                box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+                border-radius: 10px;
+
+
+            }
+        }
+
+        .bottom {
+            padding: 20px;
+
+
+            .table {
+                box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+                border-radius: 10px;
+
+                h2 {
+                    font-size: 16px;
+                    padding-left: 20px;
+                    padding: 8px;
+                    margin-bottom: 20px;
+                    color: $text-color;
+                }
+            }
+        }
     }
 }
