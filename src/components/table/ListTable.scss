@@ -1,0 +1,44 @@
+@import '../../variables.scss';
+
+.tableWrapper {
+
+    .table {
+
+        background-color: $background-color;
+
+        .tableCellImgWrapper {
+            display: flex;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+
+            .tableCellImg {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+                margin-right: 10px;
+
+            }
+        }
+
+        .status {
+
+            &.Approved {
+                color: rgb(2, 120, 2);
+                background-color: rgb(132, 220, 0, 0.4);
+                padding: 5px;
+                border-radius: 5px;
+            }
+
+            &.Cancelled {
+                color: rgb(197, 1, 1);
+                background-color: rgb(252, 157, 157, 0.4);
+                padding: 5px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+
+}

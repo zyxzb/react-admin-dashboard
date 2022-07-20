@@ -1,0 +1,39 @@
+.dataTable {
+    height: 600px;
+    padding: 20px;
+
+    .cellWithStatus {
+        padding: 5px;
+
+        &.inactive {
+            color: rgb(197, 1, 1);
+            background-color: rgba(252, 157, 157, 0.4);
+            border-radius: 5px;
+        }
+
+        &.active {
+            color: rgb(2, 120, 2);
+            background-color: rgba(132, 220, 0, 0.4);
+            border-radius: 5px;
+        }
+    }
+
+    .cellAction {
+        display: flex;
+        width: 100%;
+        gap: 15px;
+
+        .viewButton {
+            border: 1px dotted gray;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:nth-of-type(2) {
+                color: rgba(255, 108, 108, 0.773);
+            }
+        }
+
+
+    }
+}

@@ -23,6 +23,7 @@
 
     .listContainer {
         display: flex;
+        flex-direction: column;
         margin: 20px;
         padding: 20px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -31,7 +32,7 @@
         .listTitle {
             font-weight: 500;
             color: $text-color;
-            margin-bottom: 50px;
+            margin-bottom: 15px;
 
         }
 
