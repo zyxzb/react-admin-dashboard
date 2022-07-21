@@ -11,6 +11,7 @@ import LoginIcon from '@mui/icons-material/Login';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import { Link } from 'react-router-dom';
 
 
 
@@ -21,25 +22,33 @@ const Sidebar = () => {
     return (
         <div className='sidebar'>
             <div className="top">
+                <Link to="/">
                 <span className="logo">LOGO</span>
+                </Link>
             </div>
             <hr />
             <div className="center">
                 <ul>
                     <p className="title">MAIN</p>
+                    <Link to="/">
                     <li>
                         <DashboardIcon className='icon'/>
                         <span>Dashboard</span>
                     </li>
+                    </Link>
                     <p className="title">LISTS</p>
+                    <Link to="/users">
                     <li>
                         <PersonOutlineIcon className='icon'/>
                         <span>Users</span>
                     </li>
+                    </Link>
+                    <Link to="/products">
                     <li>
                         <StoreIcon className='icon'/>
                         <span>Products</span>
                     </li>
+                    </Link>
                     <li>
                         <PaymentIcon className='icon'/>
                         <span>Orders</span>

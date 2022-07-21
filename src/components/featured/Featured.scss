@@ -32,7 +32,7 @@
 
         .featuredChart {
             width: 100px;
-            height: 100pxs;
+            height: 100px;
         }
 
         .title {
@@ -41,6 +41,7 @@
         }
 
         .amount {
+            color: $text-color;
             font-size: 28px;
             font-weight: bold;
         }

@@ -12,11 +12,17 @@
         justify-content: center;
         align-items: center;
 
-        .logo {
-            font-style: 20px;
-            font-weight: bold;
-            color: $text-color;
+        a {
+            text-decoration: none;
+
+            .logo {
+                font-style: 20px;
+                font-weight: bold;
+                color: $text-color;
+            }
         }
+
+
     }
 
     hr {
@@ -26,6 +32,12 @@
     }
 
     .center {
+
+        a {
+            text-decoration: none;
+
+        }
+
         padding-left: 10px;
 
         ul {
@@ -53,7 +65,7 @@
 
                 .icon {
                     margin-right: 7px;
-
+                    color: $text-color;
                 }
 
                 span {

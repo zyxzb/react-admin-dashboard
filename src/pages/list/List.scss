@@ -1,5 +1,8 @@
+@import '../../variables.scss';
+
 .list {
     display: flex;
+    background-color: $background-color;
 
     .listContainer {
         flex: 6;

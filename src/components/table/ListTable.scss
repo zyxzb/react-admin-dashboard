@@ -6,6 +6,10 @@
 
         background-color: $background-color;
 
+        .tableCell {
+            color: $text-color;
+        }
+
         .tableCellImgWrapper {
             display: flex;
             align-items: center;

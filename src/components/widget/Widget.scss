@@ -24,12 +24,15 @@
         .counter {
             font-size: 28px;
             font-weight: 300;
+            color: $text-color;
         }
 
         .link {
             font-size: 12px;
             border-bottom: 1px solid $border-color;
             width: max-content;
+            color: $text-color;
+            cursor: pointer;
 
         }
 
