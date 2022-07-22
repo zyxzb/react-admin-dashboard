@@ -1,233 +1,185 @@
 @import '../variables';
 
+
 .app.dark {
-    .home {
-        .sidebar {
+    background-color: $background-color-dark;
+    color: $text-color-dark;
 
-            background-color: $background-color-dark;
+    .homeContainer {
+        background-color: $background-color-dark;
+    }
 
-            .top {
+    .chartGrid {
+        stroke: rgba(228, 228, 228, 0.219);
+    }
 
-                a {
-                    text-decoration: none;
+    .widget {
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 4px 12px;
 
-                    .logo {
 
-                        color: $text-color-dark;
-                    }
-                }
-            }
+    }
 
-            .center {
+    .title,
+    .counter,
+    .link,
+    .amount,
+    .desc {
+        color: $text-color-dark;
+    }
 
-                a {
-                    color: $text-color-dark;
-                }
+    .featured {
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 4px 12px;
 
-                ul {
-
-                    .title {
-
-                        color: $text-color-dark;
-                    }
-
-                    li {
-                        &:hover {
-
-                            background-color: rgb(102, 102, 102);
-                        }
-
-                        .icon {
-                            color: $text-color-dark;
-                        }
-
-                        span {
-
-                            color: $text-color-dark;
-                        }
-                    }
-                }
-            }
-        }
-
-        .homeContainer {
-
-            background-color: $background-color-dark;
-
-            .navbar {
-
-                background-color: $background-color-dark;
-
-                .wrapper {
-                    .search {
-                        input {
-
-                            color: $text-color-dark;
-
-                            &::placeholder {
-
-                                color: $text-color-dark;
-
-                            }
-                        }
-
-                        svg {
-
-                            color: $text-color-dark;
-
-                        }
-                    }
-
-                    .items {
-                        .item {
-                            .icon {
-
-                                cursor: pointer;
-                                color: $text-color-dark;
-
-                            }
-
-                            .avatar {
-
-                                border: 1px solid $border-color;
-                            }
-
-                            span {
-                                color: $text-color-dark;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .widgets {
-                .widget {
-
-                    box-shadow: rgba(255, 255, 255, 0.1) 0 4px 12px;
-
-                    .left,
-                    .right {
-                        .title {
-
-                            color: $text-color-dark;
-                        }
-
-                        .counter {
-
-                            color: $text-color-dark;
-                        }
-
-                        .link {
-
-                            color: $text-color-dark;
-                        }
-                    }
-
-                    .icon {
-
-                        color: $text-color-dark;
-                        background-color: rgb(83, 83, 83);
-                    }
-                }
-            }
-
-        }
-
-        .charts {
-            .featured {
-
-                box-shadow: rgba(255, 255, 255, 0.1) 0 4px 12px;
-
-                .top {
-                    h1 {
-
-                        color: $text-color-dark;
-                    }
-                }
-
-                .bottom {
-                    .title {
-
-                        color: $text-color-dark;
-                    }
-
-                    .amount {
-
-                        color: $text-color-dark;
-                    }
-
-                    .desc {
-
-                        color: $text-color-dark;
-                    }
-
-                    .summary {
-                        .item {
-                            .itemTitle {
-
-                                color: $text-color-dark;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .chart {
-                box-shadow: rgba(255, 255, 255, 0.1) 0 4px 12px;
-
-                .gridColor {
-                    stroke: rgb(95, 95, 95);
-                }
-
-                .title {
-                    color: $text-color-dark;
-                }
-            }
-
-        }
-
-        .listContainer {
-
-            box-shadow: rgba(255, 255, 255, 0.1) 0 4px 12px;
-
-
-            .listTitle {
-
+        .bottom {
+            .itemTitle {
                 color: $text-color-dark;
             }
+        }
+    }
 
-            .tableWrapper {
-                .table {
+    .chart {
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 4px 12px;
 
-                    background-color: $background-color-dark;
+    }
 
-                    .tableCell {
-                        color: $text-color-dark;
-                    }
+    h1,
+    h2 {
+        color: $text-color-dark;
+    }
 
-                    .status {
+    .table {
+        background-color: $background-color-dark;
 
-                        &.Approved {
-                            color: rgb(1, 240, 1);
-                            background-color: rgb(132, 220, 0, 0.4);
+        .tableCell {
+            color: $text-color-dark;
+        }
+    }
 
-                        }
+    .navbar {
+        color: $text-color-dark;
+        border-color: $border-color;
+        background-color: $background-color-dark;
 
-                        &.Cancelled {
-                            color: rgb(248, 80, 80);
-                            background-color: rgb(252, 157, 157, 0.4);
+        .search {
+            border-color: $border-color;
+        }
+    }
 
-                        }
+    .sidebar {
+        background-color: $background-color-dark;
+        border-color: $border-color;
 
-                        &.Pending {
-                            color: $text-color-dark;
+        .top {
+            .logo {
+                color: $text-color-dark;
+            }
+        }
 
+        hr {
+            border-color: $border-color;
+        }
 
-                        }
-                    }
+        ul {
+            li {
+                &:hover {
+                    background-color: rgb(70, 70, 70);
                 }
+
+                .icon {
+                    color: $text-color-dark;
+                }
+            }
+        }
+
+        .title {
+            color: $text-color-dark;
+        }
+
+        span {
+            color: $text-color-dark;
+
+        }
+    }
+
+    .listContainer {
+        background-color: $background-color-dark;
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 4px 12px;
+
+
+    }
+
+    .dataTable {
+
+
+        background-color: $background-color-dark;
+
+        .icon {
+            color: $text-color-dark;
+        }
+
+        .dataGrid {
+            color: $text-color-dark;
+        }
+    }
+
+    .viewButton {
+        color: $text-color-dark;
+    }
+
+    input {
+        background-color: transparent;
+        color: $text-color-dark;
+    }
+
+    .newContainer {
+
+        .top {
+
+            box-shadow: rgba(255, 255, 255, 0.1) 0px 4px 12px;
+        }
+
+        .bottom {
+
+            box-shadow: rgba(255, 255, 255, 0.1) 0px 4px 12px;
+        }
+    }
+
+    .singleContainer {
+
+        background-color: $background-color-dark;
+        color: $text-color-dark;
+
+        .top {
+            background-color: $background-color-dark;
+
+            .left {
+                box-shadow: rgba(255, 255, 255, 0.1) 0px 4px 12px;
+
+                .editButton,
+                .information {
+                    color: $text-color-dark;
+
+                }
+
+            }
+        }
+
+        .bottom {
+            box-shadow: rgba(255, 255, 255, 0.1) 0px 4px 12px;
+
+            h2 {
+                color: $text-color-dark;
             }
         }
 
     }
+
+
+    .single .singleContainer .top .left .item .details .detailItem .itemValue {
+        color: $text-color-dark;
+    }
+
+
+
+
 }

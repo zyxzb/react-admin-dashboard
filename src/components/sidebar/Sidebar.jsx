@@ -12,6 +12,8 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import { Link } from 'react-router-dom';
+import { useContext } from "react";
+import { ThemeContext } from '../../context/ThemeContext';
 
 
 
@@ -19,6 +21,17 @@ import { Link } from 'react-router-dom';
 import './Sidebar.scss';
 
 const Sidebar = () => {
+
+    const {dispatch} = useContext(ThemeContext)
+
+    const handleSetLight = () => {
+        dispatch({type:"LIGHT"})
+    }
+    const handleSeDark = () => {
+        dispatch({type:"DARK"})
+    }
+
+
     return (
         <div className='sidebar'>
             <div className="top">
@@ -91,8 +104,8 @@ const Sidebar = () => {
                 </ul>
             </div>
             <div className="bottom">
-                <div className="colorOption"></div>
-                <div className="colorOption"></div>
+                <div className="colorOption" onClick={handleSetLight}></div>
+                <div className="colorOption" onClick={handleSeDark}></div>
             </div>
         </div>
     );

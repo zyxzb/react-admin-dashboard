@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {DataGrid} from '@mui/x-data-grid';
 import {userColumns, userRows} from '../../DataSources';
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
@@ -9,12 +9,18 @@ import './DataTable.scss';
 
 const DataTable = () => {
 
+    const [data, setData] = useState(userRows);
+
+    const handleDeleteRow = (id) => {
+        setData(data.filter(item => item.id !== id))
+    }
+
     const actionColumn = [
         {
             field: 'action',
             headerName: 'Action',
             width: 200,
-            renderCell: () => {
+            renderCell: (params) => {
                 return (
                     <div className='cellAction'>
                         <Link
@@ -24,7 +30,7 @@ const DataTable = () => {
                         }}>
                             <div className="viewButton">View</div>
                         </Link>
-                        <div className="viewButton">Delete</div>
+                        <div className="viewButton" onClick={()=>handleDeleteRow(params.row.id)}>Delete</div>
                     </div>
                 )
             }
@@ -39,11 +45,13 @@ const DataTable = () => {
                 </Link>
             </div>
             <DataGrid
-                rows={userRows}
+                rows={data}
                 columns={userColumns.concat(actionColumn)}
                 pageSize={10}
                 rowsPerPageOptions={[10]}
-                checkboxSelection/>
+                checkboxSelection
+                className='dataGrid'
+                />
         </div>
     );
 }

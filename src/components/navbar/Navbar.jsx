@@ -2,15 +2,26 @@ import React from 'react';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
 import FullscreenExitOutlinedIcon from '@mui/icons-material/FullscreenExitOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
+import { useContext } from "react";
+import { ThemeContext } from '../../context/ThemeContext';
 
 //style
 import './Navbar.scss';
 
 const Navbar = () => {
+
+    const {dispatch} = useContext(ThemeContext);
+    const {darkMode} = useContext(ThemeContext);
+
+    const handleChangeMode = () =>{
+        dispatch({type:"TOGGLE"})
+    }
+
     return (
         <div className='navbar'>
             <div className="wrapper">
@@ -23,8 +34,8 @@ const Navbar = () => {
                         <LanguageOutlinedIcon className='icon'/>
                          <span>English</span> 
                     </div>
-                    <div className="item">
-                        <DarkModeOutlinedIcon className='icon'/>
+                    <div className="item" onClick={handleChangeMode}>
+                        {darkMode ? <WbSunnyOutlinedIcon className='icon' style={{color:"yellow"}}/> :<DarkModeOutlinedIcon className='icon'/>}
                     </div>
                     <div className="item">
                         <FullscreenExitOutlinedIcon className='icon'/>
